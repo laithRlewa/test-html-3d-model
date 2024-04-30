@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>معرض الصور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup/1.1.0/magnific-popup.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 200px;
+            width: 90%;
+            max-width: 1200px; 
+        }
+
+        .gallery a {
+            width: 100%;
+            max-width: 220px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery a:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery a:hover img {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .gallery a {
+                width: 47%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="gallery">
+            <a href="public/img/l1.jpeg" class="image-link">
+                <img src="public/img/l1.png" alt="Image of [Description]">
+            </a>
+            <a href="public/img/l2.png" class="image-link">
+                <img src="public/img/l2.png" alt="Image of [Description]">
+            </a>
+            <a href="public/img/l3.png" class="image-link">
+                <img src="public/img/l3.png" alt="Image of [Description]">
+            </a>
+            <a href="public/img/p1.png" class="image-link">
+                <img src="public/img/p1.png" alt="Image of [Description]">
+            </a>
+            <a href="public/img/p2.png" class="image-link">
+                <img src="public/img/p2.png" alt="Image of [Description]">
+            </a>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.image-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>

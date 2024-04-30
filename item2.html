@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>معرض الصور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup/1.1.0/magnific-popup.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; 
+            font-family: Arial, sans-serif; 
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 10px; 
+            padding: 20px; 
+        }
+
+        .gallery a {
+            width: 19%; /* تحديد العرض الأقصى للصور */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* إضافة ظل خفيف */
+            transition: transform 0.3s ease-in-out; /* انتقال ناعم لتحويل الصور */
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* تدوير حواف الصور */
+            transition: opacity 0.3s ease-in-out; /* انتقال ناعم للتعتيم */
+        }
+
+        .gallery a:hover {
+            transform: scale(1.05); /* تكبير الصورة عند التمرير */
+        }
+
+        .gallery a:hover img {
+            opacity: 0.9; /* تغيير الشفافية عند التمرير */
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <a href="public\img\i1.jpeg" class="image-link">
+            <img src="public/img/l1.png" alt="Image 1">
+        </a>
+        <a href="public/img/l2.png" class="image-link">
+            <img src="public/img/l2.png" alt="Image 2">
+        </a>
+        <a href="public/img/l3.png" class="image-link">
+            <img src="public/img/l3.png" alt="Image 3">
+        </a>
+        <a href="public/img/p1.png" class="image-link">
+            <img src="public/img/p1.png" alt="Image 4">
+        </a>
+        <a href="public/img/p2.png" class="image-link">
+            <img src="public/img/p2.png" alt="Image 5">
+        </a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.image-link').magnificPopup({
+                type: 'image',
+                gallery:{
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>

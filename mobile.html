@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>الهواتف النقالة</title>
+    <link rel="stylesheet" href="public/styles1.css">
+</head>
+<body>
+    <a href ="index.html" class="header"> <header class="header">
+        <img src="public/img/i1.jpeg" alt="Header Image" class="header-image">
+    </header>
+</a>
+    
+
+    <div class="product-gallery">
+        <div class="product">
+            <a href="item1.html"><img src="public/img/p2.png" alt="منتج 1"></a>
+            <a href="dat.html">Iphone 12 Pro Max</a>
+        </div>
+        <div class="product">
+            <a href="item2.html"><img src="public/img/p3.png" alt="منتج 2"></a>
+            <a href="dat1.html">iphone 13 pro max</a>
+        </div>
+        <div class="product">
+            <a href="item3.html"><img src="public/img/p4.png" alt="منتج 3"></a>
+            <a href="dat2.html">galaxy s23 ultra</a>
+        </div>
+        <div class="product">
+            <a href="item4.html"><img src="public/img/p5.png" alt="منتج 4"></a>
+            <a href="dat3.html">Google Pixel 6</a>
+        </div>
+        <div class="product">
+            <a href="item1.html"><img src="public/img/p6.png" alt="منتج 5"></a>
+            <a href="dat4.html">Google Pixel 5</a>
+        </div>
+        <div class="product">
+            <a href="item1.html"><img src="public/img/p1.png" alt="منتج 6"></a>
+            <a href="dat.html">iphone 12 pro</a>
+        </div>
+    </div>
+
+    <button class="back-to-top">Back to Top</button>
+
+    <script>
+        // Scroll to top script
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.onscroll = function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
